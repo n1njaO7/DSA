@@ -68,3 +68,12 @@ void SLL :: insertAfter(node *t , int data){
         t->next = n;
     }
 }
+
+void SLL :: deleteFirst(){
+    node *r;
+    if(start){
+        r = start;
+        start = r-> next;
+        delete r;
+    }
+}
