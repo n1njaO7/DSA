@@ -58,3 +58,13 @@ node* SLL :: search(int data){
     }
     return NULL;
 }
+
+void SLL :: insertAfter(node *t , int data){
+    node *n;
+    if(t){
+        n =new node ;
+        n->item = data;
+        n->next = t->next;
+        t->next = n;
+    }
+}
