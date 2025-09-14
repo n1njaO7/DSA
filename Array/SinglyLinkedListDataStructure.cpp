@@ -121,3 +121,8 @@ void SLL :: deleteNode(node *t){
             cout<<"Empty Node"<<endl;
     }
 }
+
+SLL :: ~SLL(){
+    while(start)
+        deleteFirst();
+}
