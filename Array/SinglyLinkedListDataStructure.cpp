@@ -77,3 +77,26 @@ void SLL :: deleteFirst(){
         delete r;
     }
 }
+
+void SLL :: deleteLast(){
+    node *t;
+    try{
+        if(start==NULL)
+            throw 1;
+        else if(start->next == NULL){
+            delete start;
+            start= NULL;
+        }
+        else{
+            t = start;
+            while ((t->next->next!=NULL))
+                t=t->next;
+            delete t->next;
+            t->next = NULL;
+        }
+    }
+    catch(int e){
+        if(e==1)
+            cout<<"Empty Node"<<endl;
+    }
+}
