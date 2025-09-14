@@ -34,3 +34,16 @@ void SLL :: insertAtStart(int data){
     start = n;
 }
 
+void SLL :: insertAtLast(int data ){
+    node *t;
+    node *n =new node ;
+    n->item = data;
+    n->next = NULL;
+    if(start == NULL)
+        start = n;
+    else{
+        while (t->next != NULL)
+            t=t->next;
+        t->next = n;
+    }
+}
