@@ -47,3 +47,14 @@ void SLL :: insertAtLast(int data ){
         t->next = n;
     }
 }
+
+node* SLL :: search(int data){
+    node *t;
+    t=start;
+    while(t){
+        if(t->item==data)
+            return t;
+        t=t->next;
+    }
+    return NULL;
+}
