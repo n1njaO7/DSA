@@ -27,6 +27,30 @@ class SLL{
 SLL::SLL(){
     start = NULL;
 }
+
+SLL :: SLL(SLL &list){
+    node *t;
+    t = list.start;
+    start =NULL;
+    while (t){
+        insertAtLast(t->item);
+        t =t->next;
+    }
+}
+
+SLL& SLL:: operator=(SLL& list){
+    node *t;
+    t=list.start;
+    while (start)
+        deleteFirst();
+    while(t){
+        insertAtLast(t->item);
+        t=t->next;
+    }
+    return *this;
+    
+}
+
 void SLL :: insertAtStart(int data){
     node *n=new node;
     n->item = data;
