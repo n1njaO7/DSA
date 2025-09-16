@@ -53,4 +53,18 @@ void DLL:: insertAtLast(int data){
     }
 }
 
+void DLL:: insertAfter(node *t,int data){
+    node *n = new node;
+   if (t == NULL) {
+        cout << "Given node cannot be NULL" << endl;
+        return;
+    }
+    n->item = data;
+    n->next = t->next;
+    n->prev = t;
+    t->next = n;
+    if (n->next != NULL) {
+        n->next->prev = n;
+    }
+}
 
