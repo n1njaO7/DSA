@@ -24,3 +24,28 @@ class DLL{
         void deleteNode(node*);  
         ~DLL(); 
 };
+
+void DLL :: insertAtLast(int data){
+    node *n = new node;
+    n->item = data;
+    n->item = data;
+    n->prev = NULL;
+    start = n;
+}
+
+void DLL:: insertAtLast(int data){
+    node *t;
+    t= start;
+    node *n = new node;
+    if (start == NULL) {
+        n->prev = NULL;
+        start = n;
+    }else{
+        n->item = data;
+        n->next = NULL;
+        while(t->next != NULL)
+            t= t->next;
+        n->prev = t;
+        t->next = n;
+    }
+}
