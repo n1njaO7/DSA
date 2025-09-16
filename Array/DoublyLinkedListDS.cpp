@@ -25,11 +25,14 @@ class DLL{
         ~DLL(); 
 };
 
-void DLL :: insertAtLast(int data){
+void DLL :: insertAtStart(int data){
     node *n = new node;
     n->item = data;
-    n->item = data;
+    n->next = start;
     n->prev = NULL;
+    if (start != NULL) {
+        start->prev = n;
+    }
     start = n;
 }
 
@@ -49,3 +52,4 @@ void DLL:: insertAtLast(int data){
         t->next = n;
     }
 }
+
