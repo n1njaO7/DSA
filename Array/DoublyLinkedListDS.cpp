@@ -145,3 +145,8 @@ void DLL :: deleteNode(node *t){
         delete t;
     }
 }
+
+DLL :: ~DLL(){
+    while(start)
+        deleteFirst();
+}
