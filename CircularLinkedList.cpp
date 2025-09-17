@@ -28,6 +28,38 @@ CLL::CLL(){
     last = NULL;
 }
 
+CLL :: CLL(CLL &list){
+    node *t;
+    if(list.last==NULL)
+        last=NULL;
+    else{
+        t=list.last->next;
+        while (t!=list.last){
+            insertAtLast(t->item);
+            t =t->next;
+        }
+        insertAtLast(t->item);
+    }
+}
+
+CLL& CLL:: operator=(CLL& list){
+    while(last)
+        deleteFirst();
+    node *t;
+    if(list.last==NULL)
+        last=NULL;
+    else{
+        t=list.last->next;
+        while (t!=list.last){
+            insertAtLast(t->item);
+            t =t->next;
+        }
+        insertAtLast(t->item);
+    }
+    return *this;
+    
+}
+
 void CLL::insertAtStart(int data){
     node *n= new node;
     n->item = data;
