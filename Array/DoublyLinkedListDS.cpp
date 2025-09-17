@@ -25,6 +25,33 @@ class DLL{
         ~DLL(); 
 };
 
+DLL::DLL(){
+    start = NULL;
+}
+
+DLL :: DLL(DLL &list){
+    node *t;
+    t = list.start;
+    start =NULL;
+    while (t){
+        insertAtLast(t->item);
+        t =t->next;
+    }
+}
+
+DLL& DLL:: operator=(DLL& list){
+    node *t;
+    t=list.start;
+    while (start)
+        deleteFirst();
+    while(t){
+        insertAtLast(t->item);
+        t=t->next;
+    }
+    return *this;
+    
+}
+
 void DLL :: insertAtStart(int data){
     node *n = new node;
     n->item = data;
@@ -67,4 +94,5 @@ void DLL:: insertAfter(node *t,int data){
         n->next->prev = n;
     }
 }
+
 
