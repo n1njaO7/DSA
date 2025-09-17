@@ -131,3 +131,17 @@ void DLL :: deleteLast(){
         delete t;
     }
 }
+
+void DLL :: deleteNode(node *t){
+    if(start==NULL)
+        cout<<"UnderFlow"<<endl;
+    else if(t==start)
+        deleteFirst();
+    else if(t->next==NULL)
+        deleteLast();
+    else{
+        t->prev->next= t->next;
+        t->next->prev = t->prev;
+        delete t;
+    }
+}
