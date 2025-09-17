@@ -31,11 +31,17 @@ DLL::DLL(){
 
 DLL :: DLL(DLL &list){
     node *t;
-    t = list.start;
-    start =NULL;
-    while (t){
-        insertAtLast(t->item);
-        t =t->next;
+    if(list.start!=NULL){
+        t = list.start;
+        while(t->next!=NULL)
+            t=t->next;
+        while (t){
+            insertAtStart(t->item);
+            t =t->prev;
+        }
+    }
+    else{
+        start=NULL;
     }
 }
 
