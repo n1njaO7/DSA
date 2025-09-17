@@ -54,3 +54,13 @@ void CLL :: insertAtLast(int data){
         last = n;
     }
 }
+
+node* CLL :: search(int data){
+    node* t = last->next; // accessed to first index
+    while (t != last){
+        if(t->item == data)
+            return t;
+        t=t->next;
+    }
+    return NULL;
+}
