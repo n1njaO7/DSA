@@ -80,3 +80,14 @@ void CLL :: insertAfter(node* t , int data){
     } 
 }
 
+void CLL :: deleteFirst(){
+    node* r;
+    if(last){
+        r = last->next;
+        last = r->next;
+        if(last == r)
+            last = NULL;
+        delete r;
+    }
+}
+
