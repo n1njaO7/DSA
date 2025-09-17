@@ -28,7 +28,6 @@ class DLL{
 DLL::DLL(){
     start = NULL;
 }
-
 DLL :: DLL(DLL &list){
     node *t;
     if(list.start!=NULL){

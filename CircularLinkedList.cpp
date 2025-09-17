@@ -108,3 +108,7 @@ void CLL::deleteLast(){
     }
 }
 
+CLL :: ~CLL(){
+    while(last)
+        deleteFirst();
+}
