@@ -115,3 +115,19 @@ void DLL :: deleteFirst(){
     delete n;
 }
  
+void DLL :: deleteLast(){
+    node *t;
+    if(start ==NULL)
+        cout<<"OverFlow";
+    else if(start->next==NULL){
+        delete start;
+        start = NULL;
+    }
+    else{
+        t= start;
+        while (t->next!=NULL)
+            t=t->next;
+        t->prev->next = NULL;
+        delete t;
+    }
+}
