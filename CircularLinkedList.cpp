@@ -73,7 +73,7 @@ void CLL :: insertAfter(node* t , int data){
     node* n =new node;
     if(t==last)
         insertAtLast(data);
-    if(t){
+    else if(t){
         n->item = data;
         n->next = t->next;
         t->next = n;
