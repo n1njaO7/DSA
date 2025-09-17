@@ -46,16 +46,22 @@ DLL :: DLL(DLL &list){
 }
 
 DLL& DLL:: operator=(DLL& list){
-    node *t;
-    t=list.start;
-    while (start)
+    while(start)
         deleteFirst();
-    while(t){
-        insertAtLast(t->item);
-        t=t->next;
+    node *t;
+    if(list.start!=NULL){
+        t = list.start;
+        while(t->next!=NULL)
+            t=t->next;
+        while (t){
+            insertAtStart(t->item);
+            t =t->prev;
+        }
     }
-    return *this;
-    
+    else{
+        start=NULL;
+    }
+    return (*this);
 }
 
 void DLL :: insertAtStart(int data){
