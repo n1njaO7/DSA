@@ -108,6 +108,23 @@ void CLL::deleteLast(){
     }
 }
 
+void CLL:: deleteNode(node* t){
+    node *r;
+    if(t!=NULL){
+        if(t==last)
+            deleteLast();
+        else if(t==last->next)
+            deleteFirst();
+        else{
+            r=last->next;
+            while(r->next!=t)
+                r=r->next;
+            r->next=t->next;
+            delete t;
+        }
+    }
+}
+
 CLL :: ~CLL(){
     while(last)
         deleteFirst();
