@@ -27,3 +27,16 @@ class CLL{
 CLL::CLL(){
     last = NULL;
 }
+
+void CLL::insertAtStart(int data){
+    node *n= new node;
+    n->item = data;
+    if(last==NULL){
+        n->next=n;
+        last =n;
+    }else{
+        n->next = last->next;
+        last->next = n;
+
+    }
+}
