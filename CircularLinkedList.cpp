@@ -9,7 +9,7 @@ struct node{
 
 class CLL{
     private:
-        node *start;
+        node *last;
     public:
         CLL();
         CLL(CLL&);
@@ -23,3 +23,7 @@ class CLL{
         void deleteNode(node*);  
         ~CLL(); 
 };
+
+CLL::CLL(){
+    last = NULL;
+}
