@@ -105,3 +105,13 @@ node* DLL::search(int data){
     }
     return NULL;
 }
+
+void DLL :: deleteFirst(){
+    node *n = start;
+    start = n->next;
+    if(start){
+        start->prev = NULL;
+    }
+    delete n;
+}
+ 
