@@ -91,3 +91,20 @@ void CLL :: deleteFirst(){
     }
 }
 
+void CLL::deleteLast(){
+    node* r, *t;
+    if(last){
+        r = last;
+        if(r->next==r)
+            last = NULL;
+        else{
+            t = last->next;
+            while(t->next!=last)
+                t=t->next;
+            t->next = last->next;
+            last = t;
+        }
+        delete r;
+    }
+}
+
