@@ -95,4 +95,13 @@ void DLL:: insertAfter(node *t,int data){
     }
 }
 
-
+node* DLL::search(int data){
+    node* t;
+    t= start ;
+    while(t->next!= NULL){
+        if(t)
+            return t;
+        t=t->next;
+    }
+    return NULL;
+}
