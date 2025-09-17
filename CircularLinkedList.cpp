@@ -68,3 +68,12 @@ node* CLL :: search(int data){
     }
     return NULL;
 }
+
+void CLL :: insertAfter(node* t , int data){
+    node* n =new node;
+    if(t){
+        n->item = data;
+        n->next = t->next;
+        t->next = n;
+    } 
+}
