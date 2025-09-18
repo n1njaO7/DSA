@@ -94,6 +94,7 @@ void DynamicArray :: append(int data){
 
 }
 
+
 bool DynamicArray :: isFull(){
     return lastIndex == capacity-1;
 }

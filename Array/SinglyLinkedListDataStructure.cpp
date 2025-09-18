@@ -48,7 +48,6 @@ SLL& SLL:: operator=(SLL& list){
         t=t->next;
     }
     return *this;
-    
 }
 
 void SLL :: insertAtStart(int data){

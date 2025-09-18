@@ -57,7 +57,6 @@ CLL& CLL:: operator=(CLL& list){
         insertAtLast(t->item);
     }
     return *this;
-    
 }
 
 void CLL::insertAtStart(int data){
