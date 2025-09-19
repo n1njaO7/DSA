@@ -24,3 +24,7 @@ class CDLL{
         void deleteNode(node*);  
         ~CDLL(); 
 };
+
+DLL::DLL(){
+    start = NULL;
+}
