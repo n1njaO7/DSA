@@ -97,10 +97,28 @@ void CDLL :: deleteFirst(){
             start =NULL;
         }
     else {
-        start ->prev -> next = start->next;
+        start ->prev -> next = n->next;
         start ->next ->prev = start->prev; 
         start ->prev = n->next;
         delete n;
         }
+    }
+}
+
+void CDLL :: deleteLast(){
+    node *r;
+    if(start !=NULL){
+        r = start;
+        if(start->next == start){
+            delete start;
+            start =NULL;
+        }
+        else{
+            start ->prev -> next = start->next;
+            start ->next ->prev = start->prev; 
+            start ->prev = n->next;
+            delete n;
+        }
+       
     }
 }
