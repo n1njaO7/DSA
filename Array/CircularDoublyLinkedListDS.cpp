@@ -87,3 +87,12 @@ void CDLL:: insertAfter(node *t,int data){
         t->next->prev = n;
     }
 }
+
+void CDLL :: deleteFirst(){
+    node *n = start;
+    start = n->next;
+    if(start){
+        start->prev = NULL;
+    }
+    delete n;
+}
