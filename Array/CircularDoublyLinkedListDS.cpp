@@ -60,3 +60,16 @@ void CDLL:: insertAtLast(int data){
         start->prev->next = n;
     }
 }
+
+node* CDLL::search(int data){
+    node* t;
+    if(start == NULL)
+        return NULL;
+    t= start ;
+    do{
+        if(t->item == data )
+            return t;
+        t=t->next;
+    }while(t!=start);
+    return NULL;
+}
