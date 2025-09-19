@@ -28,3 +28,35 @@ class CDLL{
 CDLL::CDLL(){
     start = NULL;
 }
+
+void CDLL :: insertAtStart(int data){
+    node *n = new node;
+    n->item = data;
+    if(start == NULL){
+        n->next = n;
+        n->prev = n;
+        start = n;
+    }
+    else {
+        n->next = start;
+        n->prev = start ->prev;
+        start->prev->next = n;
+        start = n;
+    }
+    start = n;
+}
+
+void CDLL:: insertAtLast(int data){
+    node *n = new node;
+    n->item = data;
+    if (start == NULL) {
+        n->prev = n;
+        n->next = n;
+        start = n;
+    }else{
+        n->next = start;
+        n->prev = start->prev;
+        start->prev = n;
+        start = n
+    }
+}
