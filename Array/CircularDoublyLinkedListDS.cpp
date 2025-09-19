@@ -121,3 +121,15 @@ void CDLL :: deleteLast(){
        
     }
 }
+
+void CDLL :: deleteNode(node *t){
+    if(start==NULL || t == NULL)
+        cout<<"UnderFlow"<<endl;
+    else if(start == t)
+        deleteFirst();
+    else{
+        t->prev->next= t->next;
+        t->next->prev = t->prev;
+        delete t;
+    }
+}
