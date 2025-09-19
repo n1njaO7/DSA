@@ -73,3 +73,17 @@ node* CDLL::search(int data){
     }while(t!=start);
     return NULL;
 }
+
+void CDLL:: insertAfter(node *t,int data){
+   node *n = new node;
+   if (t == NULL || t==NULL) {
+        cout << "Given node cannot be NULL" << endl;     
+    }
+    else{
+        n->item = data;
+        n->next = t->next;
+        n->prev = t;
+        t->next = n;
+        t->next->prev = n;
+    }
+}
