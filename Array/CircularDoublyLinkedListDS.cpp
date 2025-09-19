@@ -133,3 +133,8 @@ void CDLL :: deleteNode(node *t){
         delete t;
     }
 }
+
+CDLL :: ~CDLL(){
+    while(start)
+        deleteFirst();
+}
