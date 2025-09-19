@@ -57,6 +57,6 @@ void CDLL:: insertAtLast(int data){
         n->next = start;
         n->prev = start->prev;
         start->prev = n;
-        start = n
+        start->prev->next = n;
     }
 }
