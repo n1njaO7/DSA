@@ -25,6 +25,6 @@ class CDLL{
         ~CDLL(); 
 };
 
-DLL::DLL(){
+CDLL::CDLL(){
     start = NULL;
 }
