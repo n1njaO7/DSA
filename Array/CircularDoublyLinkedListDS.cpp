@@ -29,6 +29,22 @@ CDLL::CDLL(){
     start = NULL;
 }
 
+CDLL :: CDLL(CDLL &list){
+    node *t;
+    if(list.start!=NULL){
+        t = list.start;
+        while(t->next!=NULL)
+            t=t->next;
+        while (t){
+            insertAtStart(t->item);
+            t =t->prev;
+        }
+    }
+    else{
+        start=NULL;
+    }
+}
+
 void CDLL :: insertAtStart(int data){
     node *n = new node;
     n->item = data;
