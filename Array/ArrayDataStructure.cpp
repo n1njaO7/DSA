@@ -35,7 +35,6 @@ Array :: Array (Array &arr){
     for(int i = 0; i<=lastIndex ; i++){
         ptr[i] = arr.ptr[i];
     }
-
 }
 
 Array& Array :: operator=(Array &arr){

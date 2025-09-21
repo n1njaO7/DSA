@@ -43,6 +43,7 @@ CDLL :: CDLL(CDLL &list){
     else{
         start=NULL;
     }
+    
 }
 
 void CDLL :: insertAtStart(int data){
