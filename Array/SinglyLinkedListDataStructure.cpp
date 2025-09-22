@@ -51,6 +51,7 @@ SLL& SLL:: operator=(SLL& list){
 }
 
 
+
 void SLL :: insertAtStart(int data){
     node *n=new node;
     n->item = data;

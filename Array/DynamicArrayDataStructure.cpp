@@ -177,6 +177,7 @@ void DynamicArray :: del(int index){
 }
 
 
+
 DynamicArray :: ~DynamicArray(){
     delete []ptr;
 }

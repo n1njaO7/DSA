@@ -100,6 +100,7 @@ void Array :: insert(int data , int index){
     }       
 }
 
+
 int Array :: getItem(int index){
     try{
         if (index<0 || index> lastIndex)
