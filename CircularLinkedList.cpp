@@ -140,6 +140,7 @@ void CLL::deleteLast(){
 
 }
 
+
 void CLL:: deleteNode(node* t){
     node *r;
     if(t!=NULL){
