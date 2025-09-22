@@ -23,7 +23,8 @@ class DLL{
         void deleteLast();   
         void deleteNode(node*);  
         ~DLL(); 
-};
+
+    };
 
 DLL::DLL(){
     start = NULL;
