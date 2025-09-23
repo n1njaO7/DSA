@@ -1,5 +1,7 @@
 #include <iostream>
+#include<stdio.h>
 using namespace std;
+#define STACK_IS_EMPTY 1
 
 class Stack
 {
@@ -14,12 +16,12 @@ class Stack
         Stack &operator = (Stack&); 
         void createStack(int);
         void push(int);
+        int peek();
+        void pop(int);
         void insert(int,int);
-        void append(int);
         int getItem(int);
         bool isEmpty();
         bool isFull();
-        void del(int);
         void edit(int,int);
         int count();
         int getCapacity();
@@ -58,3 +60,11 @@ void Stack :: push(int data){
         ptr[top]=data;
     }
 }
+
+int Stack :: peek(){
+    if(isEmpty())
+        throw STACK_IS_EMPTY;
+    return ptr[top];
+}
+
+
