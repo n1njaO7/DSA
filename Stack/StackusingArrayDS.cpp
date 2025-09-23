@@ -9,6 +9,7 @@ class Stack
         int *ptr;
     public:
         Stack();
+        Stack(int);
         Stack(Stack&);
         Stack &operator = (Stack&); 
         void createStack(int);
@@ -30,3 +31,12 @@ Stack :: Stack(){
     ptr=NULL;
 }
 
+Stack :: Stack(int cap){
+    capacity = cap;
+    top = -1;
+    ptr=new int[cap];
+}
+
+void Stack :: createStack(int cap){
+
+}
