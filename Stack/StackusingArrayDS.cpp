@@ -23,3 +23,10 @@ class Stack
         int getCapacity();
         ~Stack();
 };
+
+Stack :: Stack(){
+    capacity = 0;
+    top = -1;
+    ptr=NULL;
+}
+
