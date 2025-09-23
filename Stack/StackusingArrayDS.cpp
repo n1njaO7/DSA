@@ -45,3 +45,6 @@ void Stack :: createStack(int cap){
     ptr = new int[capacity];
 }
 
+bool Stack :: isFull(){
+    return top == capacity-1;
+}
