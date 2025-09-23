@@ -18,6 +18,7 @@ class Stack
         void push(int);
         int peek();
         void pop(int);
+        ~Stack();
         void insert(int,int);
         int getItem(int);
         bool isEmpty();
@@ -25,7 +26,6 @@ class Stack
         void edit(int,int);
         int count();
         int getCapacity();
-        ~Stack();
 };
 
 Stack :: Stack(){
@@ -77,4 +77,9 @@ void Stack :: pop(int data){
     else{
         top--;
     }
+}
+
+Stack:: ~Stack(){
+    if(ptr!=NULL)
+        delete []ptr;
 }
