@@ -13,6 +13,7 @@ class Stack
         Stack(Stack&);
         Stack &operator = (Stack&); 
         void createStack(int);
+        void push(int);
         void insert(int,int);
         void append(int);
         int getItem(int);
@@ -47,4 +48,13 @@ void Stack :: createStack(int cap){
 
 bool Stack :: isFull(){
     return top == capacity-1;
+}  
+
+void Stack :: push(int data){
+    if(isFull())
+        cout<<"\nStack Overflow";
+    else{
+        top++;
+        ptr[top]=data;
+    }
 }
