@@ -40,6 +40,14 @@ Stack :: Stack(int cap){
     ptr=new int[cap];
 }
 
+Stack:: Stack(Stack &s){
+    capacity = s.capacity;
+    top = s.top;
+    ptr = new int[capacity];
+    for(int i=0;i<=top;i++)
+        ptr[i] = s.ptr[i];
+}
+
 void Stack :: createStack(int cap){
     if(ptr!=NULL)
         delete ptr;
