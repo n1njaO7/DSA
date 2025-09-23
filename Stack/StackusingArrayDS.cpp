@@ -38,5 +38,10 @@ Stack :: Stack(int cap){
 }
 
 void Stack :: createStack(int cap){
-
+    if(ptr!=NULL)
+        delete ptr;
+    capacity = cap;
+    top = -1;
+    ptr = new int[capacity];
 }
+
