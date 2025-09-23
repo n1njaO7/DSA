@@ -18,14 +18,9 @@ class Stack
         void push(int);
         int peek();
         void pop(int);
-        ~Stack();
-        void insert(int,int);
-        int getItem(int);
         bool isEmpty();
         bool isFull();
-        void edit(int,int);
-        int count();
-        int getCapacity();
+        ~Stack();
 };
 
 Stack :: Stack(){
