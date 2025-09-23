@@ -48,6 +48,17 @@ Stack:: Stack(Stack &s){
         ptr[i] = s.ptr[i];
 }
 
+Stack& Stack:: operator=(Stack &s){
+    if(ptr!=NULL)
+        delete []ptr;
+    capacity = s.capacity;
+    top = s.top;
+    ptr = new int[capacity];
+    for(int i=0;i<=top;i++)
+        ptr[i] = s.ptr[i];
+    return *this;
+}
+
 void Stack :: createStack(int cap){
     if(ptr!=NULL)
         delete ptr;
