@@ -67,4 +67,6 @@ int Stack :: peek(){
     return ptr[top];
 }
 
-
+bool Stack :: isEmpty(){
+    return top == -1; 
+}
