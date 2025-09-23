@@ -70,3 +70,11 @@ int Stack :: peek(){
 bool Stack :: isEmpty(){
     return top == -1; 
 }
+
+void Stack :: pop(int data){
+    if(isEmpty())
+        cout<<"\nStack Overflow";
+    else{
+        top--;
+    }
+}
