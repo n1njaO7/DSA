@@ -17,14 +17,7 @@ class Stack{
         Stack& operator=(Stack&);
         void push(int);
         int peek();
-        void pop();
-        void insertAtStart(int);    
-        void insertAtLast(int);    
-        void insertAfter(node*,int);
-        node* search(int); 
-        void deleteFirst();   
-        void deleteLast();   
-        void deleteNode(node*);  
+        void pop();  
         ~Stack(); 
 };
 
