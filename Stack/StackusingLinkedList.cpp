@@ -47,4 +47,7 @@ void Stack :: pop(){
     }
 }
 
-
+Stack::~Stack(){
+    while(top)
+        pop();
+}
