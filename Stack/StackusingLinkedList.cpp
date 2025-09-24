@@ -16,7 +16,8 @@ class Stack{
         Stack(Stack&);
         Stack& operator=(Stack&);
         void push(int);
-        int peek(int);
+        int peek();
+        void pop();
         void insertAtStart(int);    
         void insertAtLast(int);    
         void insertAfter(node*,int);
@@ -37,3 +38,13 @@ void Stack :: push(int data){
     n->next=top;
     top=n;
 } 
+
+int Stack:: peek(){
+    if(top==NULL)
+        throw EMPTY_STACK;
+    return top->item;
+}
+
+
+
+
