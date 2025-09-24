@@ -14,6 +14,8 @@ class Stack{
         Stack();
         Stack(Stack&);
         Stack& operator=(Stack&);
+        void push(int);
+        int peek(int);
         void insertAtStart(int);    
         void insertAtLast(int);    
         void insertAfter(node*,int);
@@ -28,3 +30,9 @@ Stack::Stack(){
     top = NULL;
 }
 
+void Stack :: push(int data){
+    node *n = new node;
+    n->item=data;
+    n->next=top;
+    top=n;
+} 
