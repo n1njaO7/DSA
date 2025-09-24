@@ -9,7 +9,7 @@ struct node{
 
 class Stack{
     private:
-        node *start;
+        node *top;
     public:
         Stack();
         Stack(Stack&);
@@ -23,3 +23,8 @@ class Stack{
         void deleteNode(node*);  
         ~Stack(); 
 };
+
+Stack::Stack(){
+    top = NULL;
+}
+
