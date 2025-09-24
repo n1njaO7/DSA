@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<iostream>
 using namespace std;
+#define EMPTY_STACK 1
 
 struct node{
     int item;
