@@ -17,12 +17,19 @@ class Stack{
         Stack& operator=(Stack&);
         void push(int);
         int peek();
-        void pop();  
+        void pop();
+        void reverse();  
         ~Stack(); 
 };
 
 Stack::Stack(){
     top = NULL;
+}
+
+Stack::Stack(Stack &s){
+    node *n = new node;
+    node *t = top;
+
 }
 
 void Stack :: push(int data){
@@ -45,6 +52,17 @@ void Stack :: pop(){
         top=top->next;
         delete r;
     }
+}
+
+void Stack :: reverse(){
+    Stack s1;
+    while (top)
+    {
+        s1.push(peek());
+        pop();
+    }
+    top=s1.top;
+    s1.top=NULL;
 }
 
 Stack::~Stack(){
