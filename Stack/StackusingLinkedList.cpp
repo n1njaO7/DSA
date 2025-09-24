@@ -27,9 +27,15 @@ Stack::Stack(){
 }
 
 Stack::Stack(Stack &s){
-    node *n = new node;
-    node *t = top;
-
+    node *t ;
+    s.reverse();
+    t=s.top;
+    while (t)
+    {
+        push(t->item);
+        t=t->next;
+    }
+    s.reverse();
 }
 
 void Stack :: push(int data){
