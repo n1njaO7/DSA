@@ -45,6 +45,13 @@ int Stack:: peek(){
     return top->item;
 }
 
-
+void Stack :: pop(){
+    node *r;
+    if(top!=NULL){
+        r =top;
+        top=top->next;
+        delete r;
+    }
+}
 
 
