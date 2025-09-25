@@ -158,7 +158,6 @@ void CLL:: deleteNode(node* t){
     }
 }
 
-
 CLL :: ~CLL(){
     while(last)
         deleteFirst();
