@@ -24,6 +24,7 @@ class Array
         ~Array();
 };
 
+
 Array :: Array(){
     ptr = NULL;
 }
