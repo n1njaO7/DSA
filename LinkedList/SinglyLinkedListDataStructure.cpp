@@ -24,6 +24,7 @@ class SLL{
         ~SLL(); 
 };
 
+
 SLL::SLL(){
     start = NULL;
 }
