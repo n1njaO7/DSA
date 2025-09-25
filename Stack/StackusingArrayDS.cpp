@@ -23,6 +23,7 @@ class Stack
         ~Stack();
 };
 
+
 Stack :: Stack(){
     capacity = 0;
     top = -1;
