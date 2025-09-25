@@ -20,7 +20,8 @@ class Stack{
         void pop();
         void reverse();  
         ~Stack(); 
-};
+}
+;
 
 Stack::Stack(){
     top = NULL;
