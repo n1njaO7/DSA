@@ -158,6 +158,8 @@ void DynamicArray :: edit(int index , int data ){
     }
 }
 
+
+
 void DynamicArray :: del(int index){
     try{ 
         if(index<0 || index> lastIndex)
