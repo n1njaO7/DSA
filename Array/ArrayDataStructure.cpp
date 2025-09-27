@@ -52,6 +52,7 @@ Array& Array :: operator=(Array &arr){
     return (*this);
 }
 
+
 void Array :: createArray(int cap){
     capacity = cap;
     lastIndex = -1;
